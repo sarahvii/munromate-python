@@ -2,10 +2,12 @@ from flask import Flask, render_template
 from controllers import hiker_controller
 from controllers import munro_controller
 from controllers.munro_controller import munros_blueprint
+from controllers.hiker_controller import hikers_blueprint
 
 app = Flask(__name__)
 
 app.register_blueprint(munros_blueprint)
+app.register_blueprint(hikers_blueprint)
 
 @app.route('/')
 def home():

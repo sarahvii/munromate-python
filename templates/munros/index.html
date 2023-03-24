@@ -5,7 +5,11 @@
 </div>
 <div>
     {% for munro in all_munros %}
-        {{ munro.name }} {{ munro.height }}
+    <div>
+        <p>
+        <b>{{ munro.name }}</b> {{ munro.height }}
+        </p>
+    </div>
     {% endfor %}
 </div>
 {% endblock %}

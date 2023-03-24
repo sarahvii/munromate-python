@@ -13,7 +13,7 @@ def select_all():
     sql = "SELECT * FROM munros"
     results = run_sql(sql)
     for row in results:
-        munro = Munro(row['name'], row['height'])
+        munro = Munro(row['name'], row['height'], row['id'])
         munros.append(munro)
     return munros
 
