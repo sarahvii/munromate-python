@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<div>
+    <p>WOO! I'm an HIKER index!</p>
+</div>
+<div>
+    {% for hiker in all_hikers %}
+    <div>
+        <p>
+        {{ hiker.name }}
+        </p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
