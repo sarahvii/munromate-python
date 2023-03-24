@@ -1,6 +1,40 @@
+nav > ul {
+    list-style:none;
+}
+
+nav > ul > li > a {
+    color: white;
+}
+
 body {
-    color: #70ae83;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    padding: 20px;
-    margin: 20px;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
   }
+
+body > header {
+    background-color: lightseagreen;
+    padding: 1rem;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header > nav > ul {
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+body > main {
+    width: 70%;
+    margin: auto;
+}
+
+body > footer {
+    background-color: lightseagreen;
+    padding: 16px;
+    color: white;
+    text-align: center;
+}
+
