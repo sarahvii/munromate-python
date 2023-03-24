@@ -7,9 +7,9 @@ MVP
 - The user should be able to create a to-do list of munros to hike
 - The user should be able to add munros to the to-do list
 - The user should be able to remove munro’s from the to-do list
-- The user should be able to check off munro’s as complete
+- The user should be able to check off munros as complete
 
 Possible Extensions
-- Munro’s can be filtered by features eg. Height
+- Munros can be filtered by features eg. Height
 - User can add reviews of hike
-- User can add tags to munro’s eg. accessible by public transport, difficulty level
+- User can add tags to munros eg. accessible by public transport, difficulty level

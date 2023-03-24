@@ -11,3 +11,6 @@ VALUES ('Ben Nevis', 1344);
 
 INSERT INTO munros (name, height)
 VALUES ('Ben Vorlich', 985);
+
+INSERT INTO munros (name, height)
+VALUES ('Ben Chonzie', 931)
