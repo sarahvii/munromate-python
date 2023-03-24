@@ -19,3 +19,13 @@ def select_all():
 
 # The run_sql function returns a list of dictionary-like objects, but we really want a list of munro objects back.
 # To get this we need to loop through the list of results, getting the information for each munro from the dictionary like object, then creating a list of task objects.
+
+def select(id):
+    munro = None
+    sql = "SELECT * FROM munros WHERE id = %s"
+    values = [id]
+    result = run_sql(sql, values)[0]
+
+    if result is not None:
+        munro = Munro(result['name'], result['height'], result['id'])
+    return munro
