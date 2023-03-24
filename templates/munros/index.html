@@ -3,4 +3,9 @@
 <div>
     <p>WOO! I'm an MUNRO index!</p>
 </div>
+<div>
+    {% for munro in all_munros %}
+        {{ munro.name }} {{ munro.height }}
+    {% endfor %}
+</div>
 {% endblock %}
