@@ -13,12 +13,12 @@ def hikers():
     return render_template('hikers/index.html', title='Hikers', all_hikers = hikers)
 
 # SHOW 
-# GET /'munros/<index>'
+# GET /'hikers/<index>'
 @hikers_blueprint.route('/hikers/<index>')
 def single_hiker(index):
     hikers = hiker_repository.select_all()
     selected_hiker = hikers[int(index)]
-    return render_template('hikers/hiker.html', title='Hiker', munro = selected_hiker)
+    return render_template('hikers/hiker.html', title='Hiker', hiker = selected_hiker)
 
 # NEW
 # GET '/hikers/new'
@@ -28,7 +28,7 @@ def new_hiker():
     return render_template("hikers/new.html")
 
 # CREATE
-# POST '/hikers/'
+# POST '/hikers'
 @hikers_blueprint.route('/hikers', methods=['POST'])
 def create_hiker():
     name = request.form['name']
@@ -37,6 +37,6 @@ def create_hiker():
     hiker_repository.save(hiker)
     return redirect('/hikers')
 
-# This works but redirects to /hikers
+# The above works but redirects to /hikers
 # We want this to redirect to the individual hiker created. <index>
 
