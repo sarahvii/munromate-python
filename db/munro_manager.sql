@@ -1,4 +1,6 @@
 DROP TABLE IF EXISTS munros;
+DROP TABLE IF EXISTS hikers;
+DROP TABLE IF EXISTS todos;
 
 CREATE TABLE munros (
     id SERIAL PRIMARY KEY,
@@ -15,8 +17,6 @@ VALUES ('Ben Vorlich', 985);
 INSERT INTO munros (name, height)
 VALUES ('Ben Chonzie', 931);
 
-DROP TABLE IF EXISTS hikers;
-
 CREATE TABLE hikers (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255),
@@ -31,3 +31,9 @@ VALUES ('Bob', 52);
 
 INSERT INTO hikers (name, age)
 VALUES ('Jane', 42);
+
+CREATE TABLE todos (
+    id SERIAL PRIMARY KEY,
+    hiker_id INT REFERENCES hikers(id) ON DELETE CASCADE,
+    munro_id INT REFERENCES munros(id) ON DELETE CASCADE
+);
