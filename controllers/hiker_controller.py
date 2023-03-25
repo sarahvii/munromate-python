@@ -40,3 +40,9 @@ def create_hiker():
 # The above works but redirects to /hikers
 # We want this to redirect to the individual hiker created. <index>
 
+# DELETE
+# POST '/hikers/<id>'
+@hikers_blueprint.route('/hikers/<id>/delete', methods=['POST'])
+def delete_hiker(id):
+    hiker_repository.delete(id)
+    return redirect('/hikers')

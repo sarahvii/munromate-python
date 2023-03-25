@@ -1,6 +1,8 @@
 from db.run_sql import run_sql
 from models.hiker import Hiker
 
+# SELECT ALL HIKERS
+
 def select_all():
     hikers = []
     sql = "SELECT * FROM hikers"
@@ -12,7 +14,7 @@ def select_all():
 
 # SELECT ONE HIKER
 
-# CREATE NEW HIKER OBJECT
+# CREATE NEW HIKER
 def save(hiker):
     sql= "INSERT INTO hikers (name, age) VALUES (%s, %s) RETURNING *"
     values = [hiker.name, hiker.age]
@@ -20,3 +22,13 @@ def save(hiker):
     id = results[0]['id']
     hiker.id = id
     return hiker
+
+# DELETE HIKER
+def delete(id):
+    sql = "DELETE FROM hikers WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
+
+
+# FORM WITH POST METHOD
+
