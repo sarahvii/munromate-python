@@ -3,11 +3,16 @@ from repositories import munro_repository
 from flask import Blueprint
 munros_blueprint = Blueprint("munros", __name__)
 
+
+# SHOW
+# GET /'munros'
 @munros_blueprint.route('/munros')
 def munros():
     munros = munro_repository.select_all()
     return render_template('munros/index.html', title='Munros', all_munros = munros)
 
+# SHOW 
+# GET /'munros/<index>'
 @munros_blueprint.route('/munros/<index>')
 def single_munro(index):
     munros = munro_repository.select_all()
