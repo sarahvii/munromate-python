@@ -25,3 +25,4 @@ def select_all():
         todo = Todo(hiker, munro, row['id'])
         todos.append(todo)
     return todos
+

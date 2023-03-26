@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+<div>
+    <p>WOO! I'm an TODO index!</p>
+</div>
+
+<!-- This section below is uncessary as todos/index won't be accessed -->
+<div>
+    <ul>
+        {% for todo in todos %}
+        <li>
+            <p>{{ todo.hiker.name }} - {{ todo.munro.name }}</p>
+            <p>
+                <form action ="/todos/{{ todo.id }}/delete" method="POST">
+                    <input class="button" type="submit">
+                </form>
+            </p>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+
+<!-- <div>
+    {% for munro in all_munros %}
+    <div>
+        <p>
+        <b>{{ munro.name }}</b> {{ munro.height }}
+        </p>
+        <p><a href="/munros/{{ loop.index0 }}">Show Munro</a></p>
+    </div>
+    {% endfor %}
+</div> -->
+{% endblock %}

@@ -46,3 +46,11 @@ def create_hiker():
 def delete_hiker(id):
     hiker_repository.delete(id)
     return redirect('/hikers')
+
+# GET ROUTE TO HIKER'S TODO
+@hikers_blueprint.route('/hikers/<id>/todo', methods=["GET"])
+def hiker_todo(id):
+    hiker = hiker_repository.select(id)
+    todos = hiker_repository.todos(hiker)
+    print(todos)
+    return render_template('todos/todo.html', hiker = hiker, todos = todos)
