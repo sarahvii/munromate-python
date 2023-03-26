@@ -1,6 +1,21 @@
 {% extends "base.html" %}
 {% block content %}
+<div>
+    <h1>{{ hiker.name }}'s Todo List</h1>
+{% if todos %}
+    <ul>
+        {% for todo in todos %}
+            <li>{{ todo.name }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <li>No To Do List found</li>
+{% endif %}
+</ul>
 
+{{ hiker }}
+{{ todos }}
+</div>
 <div>
     <p>WOO! I'm a HIKERS INDIVIDUAL TO DO LIST!</p>
 </div>
