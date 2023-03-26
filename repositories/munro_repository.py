@@ -1,6 +1,12 @@
 from db.run_sql import run_sql
 from models.munro import Munro
 
+def save(munro):
+    sql = "INSERT INTO munros ( name, height ) VALUES ( %s, %s ) RETURNING id"
+    values = [munro.name, munro.height]
+    results = run_sql( sql, values )
+    munro.id = results[0]['id']
+    return munro
 
 # This file includes functions for the interactions with the database.
 
