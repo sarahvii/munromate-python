@@ -12,9 +12,9 @@
 </head>
 <div id="container">
   <body>
+
     <header>
       <div><h1>Munro Tracker</h1></div>
-      <div>2</div>
       <div>
         <nav> 
           <ul class="menu">
@@ -25,21 +25,27 @@
         </nav>
       </div>
       </header>
+
       <aside>
         Aside.
       </aside>
+
       <main>
+        <div>
+          1
+        </div>
         <div>
             {% block content %}
             {% endblock %}
         </div>
+        <div>
+          3
+        </div>
       </main>
+
       <footer>
-        <h2>FOOTER</h2>
-        <div id="footer-container">
-            <section>
-                <p>© 2023 Sarah Smith</p>
-            </section>
+        <div>
+          <p>© 2023 Sarah Smith</p>
         </div>
       </footer>
   </body>
