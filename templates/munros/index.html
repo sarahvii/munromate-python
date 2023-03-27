@@ -1,8 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-<div>
-    <p>WOO! I'm an MUNRO index!</p>
-</div>
+<article class="munro-display">
 <div>
     {% for munro in all_munros %}
     <div>
@@ -14,3 +12,4 @@
     {% endfor %}
 </div>
 {% endblock %}
+</article>
