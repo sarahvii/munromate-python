@@ -8,6 +8,6 @@
    <p>{{ hiker.age }}</p>
 </div>
 <div>
-    <a href="{{ url_for('hikers.hiker_todo', id=hiker.id) }}">The miracle of a viewable todolist.</a>
+    <a href="/hikers/{{ hiker.id }}/todo">TO DO LIST CAN BE VIEWED</a>
 </div>
 {% endblock %}

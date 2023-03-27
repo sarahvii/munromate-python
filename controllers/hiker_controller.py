@@ -64,7 +64,7 @@ def select_munro():
     munro = munro_repository.select_all(munro_id)
     hiker = Hiker(munro)
     hiker_repository.save(munro)
-    return redirect('/hikers/{{ id }}/todo', hiker = hiker)
+    return redirect("/hikers/{{ id }}/todo", hiker = hiker)
 
 
 # def select_munro_todo(hiker_id):
