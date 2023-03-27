@@ -19,4 +19,21 @@
 <div>
     <p>WOO! I'm a HIKERS INDIVIDUAL TO DO LIST!</p>
 </div>
+
+<div>
+    <form action="/hikers/{{ id }}/todo" method="POST">
+        <!-- <div>
+            <label for="select_munro">Select Munro:</label>
+            <input type="text" id="select_munro" name="select_munro" placeholder="select_munro" required autofocus>
+        </div> -->
+    <label for="select_munro">Select a munro:</label>
+        <select name="selected_munro" id="munro">
+            {% for munro in munros %}
+            <option value="{{ munro.name }}">{{ munro.name }}</option>
+            {% endfor %}
+        </select>
+    
+        <button type="submit">Add munro</button>
+    </form>
+</div>
 {% endblock %}

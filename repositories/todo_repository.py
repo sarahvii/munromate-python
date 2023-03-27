@@ -26,3 +26,19 @@ def select_all():
         todos.append(todo)
     return todos
 
+def save_todo(todo):
+    sql = "INSERT INTO todos ( hiker_id, munro_id ) VALUES ( %s, %s ) RETURNING id"
+    values = [todo.select_munro_id, todo.hiker_id]
+    results = run_sql( sql, values )
+    todo.id = results[0]['id']
+    return todo
+
+
+
+
+# @hikers_blueprint.route('/hikers/<hiker_id>/todo', methods=['POST'])
+# def select_munro_todo(hiker_id):
+#     select_munro_id = request.form['selected_munro']
+#     todo_repository.save_to_do(select_munro_id, hiker_id)
+#     return redirect('/hikers/' + {{ id }} + '/todo')
+

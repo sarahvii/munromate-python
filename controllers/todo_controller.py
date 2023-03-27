@@ -13,7 +13,7 @@ def todos():
     return render_template('todos/index.html', title='Todos', todos = todos)
 
 # SHOW ONE
-# GET / 'todos/<index>'
+# GET / 'todos/<index>' - THIS IS UNNECESSARY
 @todos_blueprint.route('/todos/<index>')
 def single_todo(index):
     todos = todo_repository.select_all()
@@ -28,12 +28,15 @@ def single_todo(index):
 #     selected_hiker = hikers[int(index)]
 #     return render_template('hikers/hiker.html', title='Hiker', hiker = selected_hiker)
 
-# # NEW
-# # GET '/hikers/new'
-# # FORM TO ADD NEW HIKER / RETURNS A HTML FORM TO THE BROWSER
-# @hikers_blueprint.route('/hikers/new', methods=['GET'])
-# def new_hiker():
-#     return render_template("hikers/new.html")
+
+
+# POST / 'hikers/<index>/todo' - see hiker_controller
+# @todos_blueprint.route('/hikers/<index>/todo', methods=['POST'])
+# def select_munro_todo():
+#     select_munro = request.form['name']
+#     todo_repository.save(select_munro)
+#     return redirect('/hikers/{{ index }}/todo')
+
 
 # # CREATE
 # # POST '/hikers'

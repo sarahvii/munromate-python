@@ -1,14 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
-<div>
+<div class ="index">
     <p>WOO! I'm an HIKER index!</p>
 </div>
-<div>
+<div class ="index">
     <p>
     <b><a href="/hikers/new">CREATE NEW HIKER - FORM</a></b>
     </p>
 </div>
-<div>SELECT YOUR HIKER</div>
 <div>
     <b>VIEW LIST OF ALL HIKERS</b>
     {% for hiker in all_hikers %}

@@ -18,11 +18,14 @@ def select(id):
     hiker = None
     sql = "SELECT * FROM hikers WHERE id = %s"
     values = [id]
-    result = run_sql(sql, values)[0]
+
+    results = run_sql(sql, values)
+    result = results[0]
+
 
     if result is not None:
         hiker = Hiker(result['name'], result['age'], result['id'])
-    return hiker
+        return hiker
 
 # CREATE NEW HIKER
 def save(hiker):
@@ -44,6 +47,7 @@ def delete(id):
 
 # TODO LIST
 def todos(hiker):
+    todos = []
     sql = "SELECT munros.name FROM INNER JOIN todo ON munros.id WHERE todo.hiker_id = %s"
     values = [hiker.id]
     results = run_sql(sql, values)
@@ -52,4 +56,5 @@ def todos(hiker):
         munro_name = row['name']
         todo = Todo(munro_name)
         todos.append(todo)
+    return todos
 

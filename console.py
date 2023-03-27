@@ -34,4 +34,5 @@ for munro in result:
 for hiker in hiker_result:
     print(hiker.__dict__)
 
-pdb.set_trace()
+# pdb.set_trace()
+
