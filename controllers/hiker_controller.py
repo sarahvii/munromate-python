@@ -1,8 +1,9 @@
 from flask import render_template, request, redirect
 from models.hiker import Hiker
-from repositories import hiker_repository as hiker_repository
-from repositories import todo_repository as todo_repository
-from repositories import munro_repository as munro_repository
+from models.todo import Todo
+import repositories.hiker_repository as hiker_repository
+import repositories.todo_repository as todo_repository
+import repositories.munro_repository as munro_repository
 from flask import Blueprint
 hikers_blueprint = Blueprint("hikers", __name__)
 
@@ -58,13 +59,14 @@ def hiker_todo(id):
     return render_template('todos/todo.html', hiker = hiker, todos = todos, munros = munros)
 
 # POST ROUTE TO HIKERS TODO
-@hikers_blueprint.route('/hikers/<id>/todo', methods=['POST'])
-def select_munro():
+@hikers_blueprint.route('/hikers/<hiker_id>/todo', methods=['POST'])
+def select_munro(hiker_id):
     munro_id = request.form['munro_id']
-    munro = munro_repository.select_all(munro_id)
-    hiker = Hiker(munro)
-    hiker_repository.save(munro)
-    return redirect("/hikers/{{ id }}/todo", hiker = hiker)
+    hiker = hiker_repository.select(hiker_id)
+    munro = munro_repository.select(munro_id)
+    todo = Todo(hiker, munro)
+    todo_repository.save(todo)
+    return redirect(f"/hikers/{ hiker_id }/todo")
 
 
 # def select_munro_todo(hiker_id):

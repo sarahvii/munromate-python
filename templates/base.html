@@ -8,11 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-    <title>MUNRO TRACKER {{ title }}</title>
+    <title>MUNRO TRACKER</title>
 </head>
-<body>
+<div id="container">
+  <body>
     <header>
-        <h1>Munro Tracker</h1>
+      <div><h1>Munro Tracker</h1></div>
+      <div>2</div>
+      <div>
         <nav> 
           <ul class="menu">
             <li><a href="/">Home</a></li>
@@ -20,9 +23,13 @@
             <li><a href="/hikers">Hikers</a></li>
           </ul>
         </nav>
+      </div>
       </header>
+      <aside>
+        Aside.
+      </aside>
       <main>
-        <div class="container">
+        <div>
             {% block content %}
             {% endblock %}
         </div>
@@ -35,5 +42,6 @@
             </section>
         </div>
       </footer>
-</body>
+  </body>
+</div>
 </html>

@@ -1,4 +1,43 @@
-nav > ul {
+#container {
+    width: 100%;
+    height: 100vh;
+    background: yellow;
+
+}
+
+header {
+    display: flex;
+    background: lightseagreen;
+
+  }
+
+header > nav > ul {
+    display: flex;
+}
+  
+aside {
+
+    background: green;
+
+  }
+  
+  main {
+
+    background: palevioletred;
+
+  }
+  
+  footer {
+
+    background: lightseagreen;
+
+  }
+
+
+
+
+
+/* nav > ul {
     list-style:none;
 }
 
@@ -59,5 +98,5 @@ body > footer {
 .index {
     width: 300px;
     height: 300px;
-}
+} */
 

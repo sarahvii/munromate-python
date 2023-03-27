@@ -1,7 +1,7 @@
 class Todo:
-    def __init__(self, hiker_id, munro_id, id = None):
-        self.hiker = hiker_id
-        self.munro = munro_id
+    def __init__(self, hiker, munro, id = None):
+        self.hiker = hiker
+        self.munro = munro
         self.id = id
 
 

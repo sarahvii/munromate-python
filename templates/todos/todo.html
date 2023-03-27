@@ -5,7 +5,7 @@
 {% if todos %}
     <ul>
         {% for todo in todos %}
-            <li>{{ todo.name }}</li>
+            <li>{{ todo.munro.name }}</li>
         {% endfor %}
     </ul>
 {% else %}
@@ -21,7 +21,7 @@
 </div>
 
 <div>
-    <form action="/hikers/{{ id }}/todo" method="POST">
+    <form action="/hikers/{{ hiker.id }}/todo" method="POST">
 
     <label for="select_munro">Select a munro:</label>
     <select id="selected_munro" name="munro_id">

@@ -1,7 +1,7 @@
 from db.run_sql import run_sql
 from models.hiker import Hiker
 from models.todo import Todo
-
+import repositories.munro_repository as munro_repository
 # SELECT ALL HIKERS
 
 def select_all():
@@ -48,13 +48,14 @@ def delete(id):
 # TODO LIST
 def todos(hiker):
     todos = []
-    sql = "SELECT munros.name FROM INNER JOIN todo ON munros.id WHERE todo.hiker_id = %s"
+    sql = "SELECT todos.* FROM todos WHERE hiker_id = %s"
     values = [hiker.id]
     results = run_sql(sql, values)
 
     for row in results:
-        munro_name = row['name']
-        todo = Todo(munro_name)
+        hiker = select(row['hiker_id'])
+        munro = munro_repository.select(row['munro_id'])
+        todo = Todo(hiker, munro, row['id'])
         todos.append(todo)
     return todos
 

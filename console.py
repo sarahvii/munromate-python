@@ -5,6 +5,7 @@ from models.todo import Todo
 import repositories.munro_repository as munro_repository
 import repositories.hiker_repository as hiker_repository
 import repositories.todo_repository as todo_repository
+import controllers.hiker_controller as hiker_controller
 
 # munro_repository.delete_all()
 # hiker_repository.delete_all()
@@ -35,4 +36,8 @@ for hiker in hiker_result:
     print(hiker.__dict__)
 
 # pdb.set_trace()
+
+hiker_controller.select_munro()
+
+
 
