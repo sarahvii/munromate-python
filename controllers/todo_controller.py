@@ -1,13 +1,15 @@
 from flask import render_template, request, redirect
 from models.todo import Todo
+from models.munro import Munro
 from repositories import todo_repository as todo_repository
+from repositories import munro_repository as munro_repository
 from flask import Blueprint
 todos_blueprint = Blueprint("todos", __name__)
 
 
 # INDEX
 # GET /'todos' -- THIS ROUTE IS UNNECESSARY
-@todos_blueprint.route('/todos')
+@todos_blueprint.route('/todos')    
 def todos():
     todos = todo_repository.select_all()
     return render_template('todos/index.html', title='Todos', todos = todos)
@@ -19,6 +21,8 @@ def single_todo(index):
     todos = todo_repository.select_all()
     selected_todo = todos[int(index)]
     return render_template('todos/todo.html', todo = selected_todo)
+
+
 
 # # SHOW 
 # # GET /'hikers/<index>'
