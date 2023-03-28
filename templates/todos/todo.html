@@ -13,7 +13,11 @@
                 {% if todo.completed == True %}
                     <i class="fa fa-check fa-2x" style="color:green" aria-hidden="true"></i>
                 {% else %}
-                    <i class="fa fa-times fa-2x" aria-hidden="true"></i>
+               
+                    <form action="/hikers/{{ hiker.id }}/todo/{{ todo.id }}/completed" method="POST">
+                        <button type="submit"><i class="fa fa-times fa-2x" aria-hidden="true"></i></button>
+
+                    </form>
                 {% endif %}
             </div>
         {% endfor %}

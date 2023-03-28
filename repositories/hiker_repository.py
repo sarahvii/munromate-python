@@ -55,7 +55,7 @@ def todos(hiker):
     for row in results:
         hiker = select(row['hiker_id'])
         munro = munro_repository.select(row['munro_id'])
-        todo = Todo(hiker, munro, row['id'])
+        todo = Todo(hiker, munro, row['completed'], row['id'])
         todos.append(todo)
     return todos
 

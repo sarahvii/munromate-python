@@ -68,6 +68,12 @@ def select_munro(hiker_id):
     todo_repository.save(todo)
     return redirect(f"/hikers/{ hiker_id }/todo")
 
+@hikers_blueprint.route('/hikers/<hiker_id>/todo/<todo_id>/completed', methods=['POST'])
+def complete_todo(hiker_id, todo_id):
+    todo_object = todo_repository.select(todo_id)
+    todo_object.mark_complete()
+    todo_repository.update(todo_object)
+    return redirect(f"/hikers/{ hiker_id }/todo")
 
 # def select_munro_todo(hiker_id):
 #     select_munro_id = request.form['selected_munro']

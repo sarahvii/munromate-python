@@ -27,6 +27,24 @@ def select_all():
         todos.append(todo)
     return todos
 
+def select(id):
+    todo = None
+    sql = "SELECT * FROM todos WHERE id = %s"
+    values = [id]
+    result = run_sql(sql, values)[0]
+
+    if result is not None:
+        hiker = hiker_repository.select(result['hiker_id'])
+        munro = munro_repository.select(result['munro_id'])
+        todo = Todo(hiker, munro, result['completed'], result['id'])
+    return todo
+
+def update(todo):
+    sql = "UPDATE todos SET (hiker_id, munro_id, completed) = (%s, %s, %s) WHERE id = %s"
+    values = [todo.hiker.id, todo.munro.id, todo.completed, todo.id]
+    results = run_sql(sql, values)
+
+
 
 
 # def save_todo(todo):
