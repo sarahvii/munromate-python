@@ -5,9 +5,11 @@
     {% for munro in all_munros %}
     <div>
         <p>
-        <b>{{ munro.name }}</b> {{ munro.height }}
+        <b>{{ munro.name }}</b>
         </p>
-        <p><a href="/munros/{{ loop.index0 }}">Show Munro</a></p>
+        <p>{{ munro.height }}m
+        </p>
+        <p><a href="/munros/{{ munro.id -1 }}">{{ munro.name }}</a></p>
     </div>
     {% endfor %}
 </div>

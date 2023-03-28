@@ -1,11 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
+<article>
 <div>
-    <h1>{{ hiker.name }}'s Todo List</h1>
+    <h1>{{ hiker.name }}'s To Hike List</h1>
 {% if todos %}
     <ul>
         {% for todo in todos %}
+            <ul>
             <li>{{ todo.munro.name }}</li>
+            </ul>
         {% endfor %}
     </ul>
 {% else %}
@@ -13,12 +16,6 @@
 {% endif %}
 </ul>
 
-{{ hiker }} 
-{{ todos }}
-</div>
-
-<div>
-    <p>ADD A MUNRO</p>
 </div>
 
 <div>
@@ -30,8 +27,10 @@
             <option value="{{ munro.id }}">{{ munro.name }}</option>
         {% endfor %}
         </select>
-    </div>
-
     <button type="submit">Add Munro</button>
 </form>
+</div>
 {% endblock %}
+</article>
+
+

@@ -17,6 +17,24 @@ VALUES ('Ben Vorlich', 985);
 INSERT INTO munros (name, height)
 VALUES ('Ben Chonzie', 931);
 
+INSERT INTO munros (name, height)
+VALUES ('Ben Lawers', 1214);
+
+INSERT INTO munros (name, height)
+VALUES ('Ben Macdui', 1309);
+
+INSERT INTO munros (name, height)
+VALUES ('Stuc a''Chroin', 975);
+
+INSERT INTO munros (name, height)
+VALUES ('Beinn Eighe', 1010);
+
+INSERT INTO munros (name, height)
+VALUES ('Ben Lomond', 974);
+
+INSERT INTO munros (name, height)
+VALUES ('Cairn Gorm', 1245);
+
 CREATE TABLE hikers (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255),

@@ -1,7 +1,7 @@
 #container {
     width: 100%;
     height: 100vh;
-    background: yellow;
+    background: white;
     margin: 0;
     font-family: 'Inter', sans-serif;
 }
@@ -30,22 +30,19 @@ a:link, a:visited {
     display: inline-block;
   }
   
-  a:hover, a:active {
-    background-color: red;
+  a:hover {
+    background-color: rgb(16, 82, 100);
+  }
+
+  a:active {
+    background-color: rgb(128, 57, 109);
   }
 
 
-  
-/* main {
-    display: flex;
-    background: white;
-    justify-content: space-between;
-
-  } */
 
 article {
     display: flex;
-    background: grey;
+    background: #8c9fa6;
     justify-content: space-evenly;
     padding: 0;
     margin: 0;
@@ -61,7 +58,8 @@ footer {
   }
 
 .photo {
-    align-items: center;
+    position: center;
+    max-width: 700px;
 }
 
 .munro-display > div {
@@ -71,4 +69,9 @@ footer {
     flex-wrap: wrap;
     padding: 40px;
     margin: 20px;
+}
+
+.container-home > div {
+    display: flex;
+    flex-direction: column;
 }

@@ -3,7 +3,7 @@
 <article>
 
 <div class="photo">
-    <p><img src="static/css/images/hiker.jpg" width="260" height="auto"></p>
+    <p><a href="/hikers/new"><img src="static/css/images/hiker.jpg" style="width: 400px;" ></a></p>
     <p>
     <b><a href="/hikers/new">CREATE NEW HIKER</a></b></p>
     </p>
@@ -12,10 +12,10 @@
     <b>VIEW LIST OF ALL HIKERS</b>
     {% for hiker in all_hikers %}
     <div>
-        <p>
+        <!-- <p>
         {{ hiker.name }}
-        </p>
-        <p><a href="/hikers/{{ loop.index0 }}">Show Hiker</a></p>
+        </p> -->
+        <p><a href="/hikers/{{ hiker.id }}">{{ hiker.name }}</a></p>
         <form class="delete-form" action="/hikers/{{ hiker.id }}/delete" method="POST">
             <button type="submit" class="bi bi-trash" style="font-size: 20px; opacity: 1;"></span></button>
             <!-- <button type="submit">Delete Hiker</button></form> -->
