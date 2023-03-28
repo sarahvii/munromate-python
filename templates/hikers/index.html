@@ -12,13 +12,11 @@
     <b>VIEW LIST OF ALL HIKERS</b>
     {% for hiker in all_hikers %}
     <div>
-        <!-- <p>
-        {{ hiker.name }}
-        </p> -->
         <p><a href="/hikers/{{ hiker.id }}">{{ hiker.name }}</a></p>
         <form class="delete-form" action="/hikers/{{ hiker.id }}/delete" method="POST">
             <button type="submit" class="bi bi-trash" style="font-size: 20px; opacity: 1;"></span></button>
-            <!-- <button type="submit">Delete Hiker</button></form> -->
+
+        </form>
     </div>
     {% endfor %}
 </div>

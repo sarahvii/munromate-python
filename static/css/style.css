@@ -38,8 +38,6 @@ a:link, a:visited {
     background-color: rgb(128, 57, 109);
   }
 
-
-
 article {
     display: flex;
     background: #8c9fa6;  
@@ -79,4 +77,10 @@ footer {
 
 .container-home {
   background-image: url('static/css/images/goat-fell.avif');
+}
+
+.munro_image {
+  max-width: 1000px;
+  border: 20px;
+  border-color: black;
 }
