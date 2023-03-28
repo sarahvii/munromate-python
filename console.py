@@ -17,10 +17,10 @@ hiker_repository.save(hiker1)
 hiker2 = Hiker("George", 95)
 hiker_repository.save(hiker2)
 
-munro1 = Munro("Ben One", 1024)
+munro1 = Munro("Ben Nevis", 1344)
 munro_repository.save(munro1)
 
-munro2 = Munro("Ben Two", 1500)
+munro2 = Munro("Ben Vorlich", 985)
 munro_repository.save(munro2)
 
 todo1 = Todo(hiker1, munro2)
