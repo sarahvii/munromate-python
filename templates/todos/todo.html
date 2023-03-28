@@ -9,10 +9,17 @@
             <ul>
             <li>{{ todo.munro.name }}</li>
             </ul>
+            <div class="buttons">
+                {% if todo.completed == True %}
+                    <i class="fa fa-check fa-2x" style="color:green" aria-hidden="true"></i>
+                {% else %}
+                    <i class="fa fa-times fa-2x" aria-hidden="true"></i>
+                {% endif %}
+            </div>
         {% endfor %}
     </ul>
 {% else %}
-    <li>No To Do List found</li>
+    <li>Time to add your first munro!</li>
 {% endif %}
 </ul>
 

@@ -53,5 +53,6 @@ VALUES ('Jane', 42);
 CREATE TABLE todos (
     id SERIAL PRIMARY KEY,
     hiker_id INT REFERENCES hikers(id) ON DELETE CASCADE,
-    munro_id INT NOT NULL REFERENCES munros(id) ON DELETE CASCADE
+    munro_id INT NOT NULL REFERENCES munros(id) ON DELETE CASCADE,
+    completed BOOLEAN
 );

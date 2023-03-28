@@ -7,8 +7,8 @@ import repositories.munro_repository as munro_repository
 import repositories.hiker_repository as hiker_repository
 
 def save(todo):
-    sql = "INSERT INTO todos ( hiker_id, munro_id ) VALUES ( %s, %s) RETURNING id"
-    values = [todo.hiker.id, todo.munro.id]
+    sql = "INSERT INTO todos ( hiker_id, munro_id, completed ) VALUES ( %s, %s, %s) RETURNING id"
+    values = [todo.hiker.id, todo.munro.id, todo.completed]
 
     results = run_sql( sql, values )
     todo.id = results[0]['id']
@@ -23,7 +23,7 @@ def select_all():
     for row in results:
         hiker = hiker_repository.select(row['hiker_id'])
         munro = munro_repository.select(row['munro_id'])
-        todo = Todo(hiker, munro, row['id'])
+        todo = Todo(hiker, munro, row['completed'], row['id'])
         todos.append(todo)
     return todos
 
