@@ -19,7 +19,7 @@ def select_all():
     sql = "SELECT * FROM munros"
     results = run_sql(sql)
     for row in results:
-        munro = Munro(row['name'], row['image'], row['height'], row['id'])
+        munro = Munro(row['name'], row['image'], row['height'], row['description'], row['id'])
         munros.append(munro)
     return munros
 
@@ -33,5 +33,5 @@ def select(id):
     result = run_sql(sql, values)[0]
 
     if result is not None:
-        munro = Munro(result['name'], result['image'], result['height'], result['id'])
+        munro = Munro(result['name'], result['image'], result['height'], result['description'], result['id'])
     return munro
