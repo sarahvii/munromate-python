@@ -41,16 +41,16 @@ a:link, a:visited {
   }
   
   a:hover {
-    background-color: rgb(16, 82, 100);
+    background-color: #c57a3c;
   }
 
   a:active {
-    background-color: rgb(128, 57, 109);
+    background-color: #51646b;
   }
 
 article {
     display: flex;
-    background: #8c9fa6;  
+    background: #b8a6a0;  
     justify-content: space-evenly;
     padding: 0;
     margin: 0;
@@ -61,7 +61,7 @@ article {
 }
   
 footer {
-    background: lightseagreen;
+    background: #647c7c;
     justify-content: center;
     align-content: center;
     padding: 20px 20px;
@@ -103,7 +103,7 @@ footer {
 
 .list_of_munros {
   display: flex;
-  background: grey;
+  background: #b8a6a0;
   color: black; 
   flex-direction: column;
   padding: 20px;
