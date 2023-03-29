@@ -139,7 +139,40 @@ footer {
   height: 75vh;
   border: 1px; solid;
   padding: 20px;
-  margin 20px;
+}
+
+.hiker_new {
+  height: 75vh;
+  border: 1px; solid;
+  padding: 20px;
+
+}
+
+.hiker_new form {
+  font-size: 16px;
+}
+
+.hiker_new label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.hiker_new input[type="text"],
+.hiker_new textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.hiker_new input[type="number"],
+.hiker_new textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 /* .leftcolumn {
@@ -164,5 +197,9 @@ h2 {
 }
 
 .welcome {
+  font-size: 180px;
   margin: 150px;
+  opacity: 0.5;
+  color: white;
+  background-color: transparent;
 }
