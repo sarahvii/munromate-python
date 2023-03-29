@@ -48,7 +48,6 @@ def create_hiker():
 # POST '/hikers/<id>'
 @hikers_blueprint.route('/hikers/<id>/delete', methods=['POST'])
 def delete_hiker(id):
-    pdb.set_trace()
     hiker_repository.delete(id)
     return redirect('/hikers')
 

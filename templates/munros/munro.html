@@ -1,11 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
-<article>
-<div>
-   <h2>{{ munro.name }}</h2>
-   <p>{{ munro.height }}</p>
-   <p>{{ munro.description }}</p>
-   <p><img class="munro_image" src="{{ munro.image }}"/></p>
-</div>
+<article class="list_of_munros">
+   <div>
+      <h2>{{ munro.name }}</h2>
+      <div class="munro_details">
+         <p><img class="munro_image" src="{{ munro.image }}"/></p>
+         <p>{{ munro.description }}</p>
+         <p>{{ munro.height }}m</p>
+      </div>
+   </div>
 {% endblock %}
 </article>
