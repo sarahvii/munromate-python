@@ -8,17 +8,20 @@
     <b><a href="/hikers/new">CREATE NEW HIKER</a></b></p>
     </p>
 </div>
-<div>
-    <b>VIEW LIST OF ALL HIKERS</b>
-    {% for hiker in all_hikers %}
-    <div>
-        <p><a href="/hikers/{{ hiker.id }}">{{ hiker.name }}</a></p>
-        <form class="delete-form" action="/hikers/{{ hiker.id }}/delete" method="POST">
-            <button type="submit" class="bi bi-trash" style="font-size: 20px; opacity: 1;"></span></button>
 
-        </form>
-    </div>
-    {% endfor %}
-</div>
-{% endblock %}
+        <aside>
+        <div>
+            <b>VIEW LIST OF ALL HIKERS</b>
+            {% for hiker in all_hikers %}
+            <div>
+                <p><a href="/hikers/{{ hiker.id }}">{{ hiker.name }}</a></p>
+                <form class="delete-form" action="/hikers/{{ hiker.id }}/delete" method="POST">
+                    <button type="submit" class="bi bi-trash" style="font-size: 20px; opacity: 1;"></span></button>
+
+                </form>
+            </div>
+            {% endfor %}
+        </div>
+    </aside>
 </article>
+{% endblock %}
