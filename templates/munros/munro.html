@@ -4,9 +4,13 @@
    <div>
       <h2>{{ munro.name }}</h2>
       <div class="munro_details">
+         <div class="left_column">
          <p><img class="munro_image" src="{{ munro.image }}"/></p>
+         </div>
+         <div class="right_column">
          <p>{{ munro.description }}</p>
          <p>{{ munro.height }}m</p>
+         </div>
       </div>
    </div>
 {% endblock %}

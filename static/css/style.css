@@ -1,5 +1,5 @@
 * {
-  position: relative;
+  /* position: relative; */
   box-sizing: border-box; 
 }
 
@@ -11,9 +11,13 @@
     font-family: 'Inter', sans-serif;
 }
 
+.container_home {
+  height: 75vh;
+}
+
 header { 
     display: flex;
-    background: lightseagreen;
+    background: #647c7c;
     justify-content: space-between;
     padding: 10px 20px;
     align-content: center;
@@ -76,17 +80,19 @@ footer {
     flex-wrap: wrap;
     padding: 40px;
     margin: 20px;
+    height: 75vh;
 }
 
-.container-home {
+/* .container-home {
   background-image: url('https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/338579968_942309380256011_5545038204168526477_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_ohc=zzi0B5_bxJoAX98DKTX&_nc_ht=scontent-man2-1.xx&oh=00_AfCQOTXIhl8ncMHVVq-sh8CJ8mPFpr2Sq-Lxia_LRukbew&oe=64283EC1');
   background-size: cover;
   background-position: center center;
   
-}
+} */
 
 .to_hike_class {
   background-image: none;
+  height: 75vh;
 }
 
 .munro_image {
@@ -101,18 +107,33 @@ footer {
   color: black; 
   flex-direction: column;
   padding: 20px;
+  height: 75vh;
 }
 
 .munro_details {
   display: flex;
   flex-wrap: wrap;
-}
+} */
 
 .munro_details p {
   flex-basis: 50%;
   padding: 10px;
   box-sizing: border-box;
 }
+
+.hiker_main {
+  height: 75vh;
+}
+
+/* .leftcolumn {
+  float: left;
+  width: 75%
+}
+
+.rightcolumn {
+  float: right;
+  width: 25%;
+} */
 
 /* .list_of_munros h2 {
   display: flex;
