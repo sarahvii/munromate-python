@@ -105,7 +105,6 @@ footer {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  /* justify-content: space-between;  */
   background: #dbb290;
   color: black; 
   padding: 20px;  
@@ -174,16 +173,6 @@ footer {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
-
-/* .leftcolumn {
-  float: left;
-  width: 75%
-}
-
-.rightcolumn {
-  float: right;
-  width: 25%;
-} */
 
 h2 {
   display: flex;
